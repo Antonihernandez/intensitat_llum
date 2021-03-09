@@ -13,6 +13,7 @@ basic.forever(function () {
         if (lluminositat < 255) {
             lluminositat += 1
             led.setBrightness(lluminositat)
+            serial.writeLine("" + (lluminositat))
         } else {
             soundExpression.giggle.play()
         }
@@ -21,6 +22,7 @@ basic.forever(function () {
         if (lluminositat > 0) {
             lluminositat += -1
             led.setBrightness(lluminositat)
+            serial.writeLine("" + (lluminositat))
         } else {
             soundExpression.spring.play()
         }
